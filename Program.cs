@@ -16,7 +16,7 @@ namespace TRAJJ_Company
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new trajLoginFrm());
+            Application.Run(new lbltrajLoginFrm());
         }
     }
 }
