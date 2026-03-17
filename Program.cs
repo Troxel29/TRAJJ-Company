@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TRAJJ_Company
+namespace TrajjRentalFrm
 {
     internal static class Program
     {
@@ -16,7 +16,7 @@ namespace TRAJJ_Company
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new lbltrajLoginFrm());
+            Application.Run(new HomePage());
         }
     }
 }
