@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TRAJJ_Company;
 
 namespace TrajjRentalFrm
 {
@@ -16,7 +17,7 @@ namespace TrajjRentalFrm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomePage());
+            Application.Run(new lbltrajLoginFrm());
         }
     }
 }

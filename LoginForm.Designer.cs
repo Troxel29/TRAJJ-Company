@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(lbltrajLoginFrm));
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblTRAJCarRentalsIntl = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
@@ -52,7 +53,7 @@
             this.lblTRAJCarRentalsIntl.Font = new System.Drawing.Font("MV Boli", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTRAJCarRentalsIntl.Location = new System.Drawing.Point(284, 100);
             this.lblTRAJCarRentalsIntl.Name = "lblTRAJCarRentalsIntl";
-            this.lblTRAJCarRentalsIntl.Size = new System.Drawing.Size(407, 45);
+            this.lblTRAJCarRentalsIntl.Size = new System.Drawing.Size(392, 44);
             this.lblTRAJCarRentalsIntl.TabIndex = 3;
             this.lblTRAJCarRentalsIntl.Text = "TRAJ Car Rentals Intl";
             // 
@@ -100,6 +101,7 @@
             this.btnClear.TabIndex = 8;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // lbltrajLoginFrm
             // 
@@ -114,6 +116,7 @@
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.lblTRAJCarRentalsIntl);
             this.Controls.Add(this.lblPassword);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "lbltrajLoginFrm";
             this.Text = "TRAJ Rentals Login Page";
             this.ResumeLayout(false);
