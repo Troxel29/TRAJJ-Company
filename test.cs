@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace TRAJJ_Company
 {
-    internal class test
-    {#region test
+    internal class test {
+        
+        #region test
         public void test1()
         {
             Console.WriteLine("test1");

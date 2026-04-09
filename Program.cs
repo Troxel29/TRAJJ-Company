@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TRAJJ_Company;
 
 namespace CARRENTALBUSINESS
 {
@@ -16,7 +17,7 @@ namespace CARRENTALBUSINESS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MDIMain());
+            Application.Run(new lbltrajLoginFrm());
         }
     }
 }
