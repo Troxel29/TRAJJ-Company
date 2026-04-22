@@ -17,7 +17,7 @@ namespace CARRENTALBUSINESS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new lbltrajLoginFrm());
+            Application.Run(new FrmLogin());
         }
     }
 }

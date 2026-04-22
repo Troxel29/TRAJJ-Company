@@ -1,25 +1,25 @@
-﻿using System;
+﻿using CARRENTALBUSINESS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data; 
+using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using TrajjRentalFrm;
 
 namespace TRAJJ_Company
 {
-    public partial class lbltrajLoginFrm : Form
+    public partial class FrmLogin : Form
     {
-        public lbltrajLoginFrm()
+        public FrmLogin()
         {
             InitializeComponent();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
@@ -27,18 +27,19 @@ namespace TRAJJ_Company
             if (txtUsername.Text == "trajrentals" && txtPassword.Text == "trajisthebest")
             {
                 MessageBox.Show("Login successful!");
-                // Proceed to the next form or main application
+                
+                MDIadmin MDIadmin = new MDIadmin();
+                MDIadmin.Show();
+
+                this.Hide();
 
 
-                HomePage homePage = new HomePage();
-                homePage.Show();
             }
             else
             {
                 MessageBox.Show("Invalid username or password. Please try again.");
 
                 txtPassword.Clear();
-                txtUsername.Clear();
                 txtUsername.Focus();
             }
         }
@@ -47,6 +48,8 @@ namespace TRAJJ_Company
         {
 
         }
+
+
 
         private void btnClear_Click(object sender, EventArgs e)
         {
