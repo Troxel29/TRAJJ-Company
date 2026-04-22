@@ -31,6 +31,8 @@
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.hOMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.bOOKINGToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.bOOKINGLISTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.bOOKINGLISTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.vEHICLESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.aBOUTUSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.cONTACTUSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,16 +64,25 @@
 			// 
 			// bOOKINGToolStripMenuItem
 			// 
+			this.bOOKINGToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bOOKINGLISTToolStripMenuItem});
 			this.bOOKINGToolStripMenuItem.Name = "bOOKINGToolStripMenuItem";
 			this.bOOKINGToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
 			this.bOOKINGToolStripMenuItem.Text = "BOOKING";
-			this.bOOKINGToolStripMenuItem.Click += new System.EventHandler(this.bOOKINGToolStripMenuItem_Click);
+			// 
+			// bOOKINGLISTToolStripMenuItem
+			// 
+			this.bOOKINGLISTToolStripMenuItem.Name = "bOOKINGLISTToolStripMenuItem";
+			this.bOOKINGToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+			this.bOOKINGLISTToolStripMenuItem.Text = "Booking List";
+			this.bOOKINGLISTToolStripMenuItem.Click += new System.EventHandler(this.bOOKINGLISTToolStripMenuItem_Click);
 			// 
 			// vEHICLESToolStripMenuItem
 			// 
 			this.vEHICLESToolStripMenuItem.Name = "vEHICLESToolStripMenuItem";
 			this.vEHICLESToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
 			this.vEHICLESToolStripMenuItem.Text = "VEHICLES";
+			this.vEHICLESToolStripMenuItem.Click += new System.EventHandler(this.vEHICLESToolStripMenuItem_Click);
 			// 
 			// aBOUTUSToolStripMenuItem
 			// 
@@ -114,6 +125,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem hOMEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bOOKINGToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bOOKINGLISTToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vEHICLESToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aBOUTUSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cONTACTUSToolStripMenuItem;

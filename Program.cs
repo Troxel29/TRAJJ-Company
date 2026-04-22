@@ -15,6 +15,8 @@ namespace CARRENTALBUSINESS
         [STAThread]
         static void Main()
         {
+            DBHelper.InitializeDatabase();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmLogin());

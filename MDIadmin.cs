@@ -32,5 +32,19 @@ namespace CARRENTALBUSINESS
             frmHomePage.MdiParent = this;
             frmHomePage.Show();
 		}
+
+        private void vEHICLESToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCarListings frmCarListings = new FrmCarListings();
+            frmCarListings.MdiParent = this;
+            frmCarListings.Show();
+        }
+
+        private void bOOKINGLISTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmBookingListings frmBookingListings = new FrmBookingListings();
+            frmBookingListings.MdiParent = this;
+            frmBookingListings.Show();
+        }
     }
 }

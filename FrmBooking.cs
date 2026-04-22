@@ -15,6 +15,19 @@ namespace CARRENTALBUSINESS
 		public FrmBooking()
 		{
 			InitializeComponent();
+			LoadCars();
+		}
+
+		private void LoadCars()
+		{
+			cbxVehiclerenting.Items.Clear();
+			var cars = DBHelper.GetCars();
+			foreach (var car in cars)
+			{
+				cbxVehiclerenting.Items.Add(car);
+			}
+			cbxVehiclerenting.DisplayMember = "Model";
+			cbxVehiclerenting.ValueMember = "Id";
 		}
 
 		private void btnSubmit_Click(object sender, EventArgs e)
@@ -25,6 +38,9 @@ namespace CARRENTALBUSINESS
 			string Identification = txtIdentification.Text;
 			string Driverslicense = txtDriverslicense.Text;
 			string Email = txtEmail.Text;
+			Car selectedCar = (Car)cbxVehiclerenting.SelectedItem;
+			DateTime pickupDate = dateTimePickerPickupdate.Value;
+			DateTime dropoffDate = dateTimePickerdropoffdate.Value;
 
 
 
@@ -48,15 +64,15 @@ namespace CARRENTALBUSINESS
 			{
 				MessageBox.Show("Please select", "Incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 			}
-			else if (dateTimePickerPickupdate == null)
+			else if (selectedCar == null)
 			{
-				MessageBox.Show("Please select your pick up date.", "Incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-				dateTimePickerPickupdate.Focus();
+				MessageBox.Show("Please select a vehicle.", "Incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				return;
 			}
-			else if (dateTimePickerdropoffdate == null)
+			else if (pickupDate >= dropoffDate)
 			{
-				MessageBox.Show("Please select your drop off date.", "Incomplete", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-				dateTimePickerdropoffdate.Focus();
+				MessageBox.Show("Dropoff date must be after pickup date.", "Invalid", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+				return;
 			}
 			else if (txtIdentification.Text == "")
 			{
@@ -76,7 +92,8 @@ namespace CARRENTALBUSINESS
 
 			else
 			{
-				BookingClass booking = new BookingClass(Firstname, Lastname, Age, Identification, Driverslicense, Email);
+				BookingClass booking = new BookingClass(Firstname, Lastname, Age, Identification, Driverslicense, Email, selectedCar.Id, pickupDate, dropoffDate);
+				DBHelper.SaveBooking(booking);
 				MessageBox.Show("Your reservation has been successfully submitted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				this.Close();
 			}
