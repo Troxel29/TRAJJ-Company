@@ -30,10 +30,6 @@ namespace TRAJJ_Company
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            string username = txtUsername.Text;
-            string password = txtPassword.Text;
-
-
             if (!string.IsNullOrEmpty(txtUsername.Text) && !string.IsNullOrEmpty(txtPassword.Text))
             {
                 MessageBox.Show("Login successful!");
@@ -41,7 +37,7 @@ namespace TRAJJ_Company
                 MDIadmin MDIadmin = new MDIadmin();
                 MDIadmin.Show();
 
-                this.Hide();
+                this.Close();
 
 
             }
@@ -53,13 +49,6 @@ namespace TRAJJ_Company
                 txtUsername.Focus();
             }
         }
-
-        private void lblUsername_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
 
         private void btnClear_Click(object sender, EventArgs e)
         {

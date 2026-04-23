@@ -6,7 +6,7 @@ using System.Data;
 
 namespace CARRENTALBUSINESS
 {
-    public static class DBHelper
+    public static class Database
     {
         private static string connectionString = ConfigurationManager.ConnectionStrings["CarRentalDB"].ConnectionString;
 
@@ -23,7 +23,7 @@ namespace CARRENTALBUSINESS
             {
                 conn.Open();
 
-                // Create Cars table
+                //  Cars table
                 SqlCommand cmd = new SqlCommand(@"
                     IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Cars' AND xtype='U')
                     CREATE TABLE Cars (
@@ -36,7 +36,7 @@ namespace CARRENTALBUSINESS
                     );", conn);
                 cmd.ExecuteNonQuery();
 
-                // Create Bookings table
+                //  Bookings table
                 cmd = new SqlCommand(@"
                     IF NOT EXISTS (SELECT * FROM sysobjects WHERE name='Bookings' AND xtype='U')
                     CREATE TABLE Bookings (
@@ -54,7 +54,7 @@ namespace CARRENTALBUSINESS
                     );", conn);
                 cmd.ExecuteNonQuery();
 
-                // Insert sample cars if empty
+                //  sample cars until we have real cars
                 cmd = new SqlCommand("IF NOT EXISTS (SELECT * FROM Cars) INSERT INTO Cars (Model, Year, PricePerDay, IsAvailable, ImagePath) VALUES ('Toyota Camry', 2020, 50.00, 1, 'car1.jpg'), ('Honda Civic', 2019, 45.00, 1, 'car2.jpg'), ('Ford Mustang', 2021, 80.00, 1, 'car3.jpg');", conn);
                 cmd.ExecuteNonQuery();
             }

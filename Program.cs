@@ -15,7 +15,7 @@ namespace CARRENTALBUSINESS
         [STAThread]
         static void Main()
         {
-            DBHelper.InitializeDatabase();
+            Database.InitializeDatabase();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
