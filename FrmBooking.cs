@@ -21,7 +21,7 @@ namespace CARRENTALBUSINESS
 		private void LoadCars()
 		{
 			cbxVehiclerenting.Items.Clear();
-			var cars = DBHelper.GetCars();
+			var cars = Database.GetCars();
 			foreach (var car in cars)
 			{
 				cbxVehiclerenting.Items.Add(car);
@@ -93,7 +93,7 @@ namespace CARRENTALBUSINESS
 			else
 			{
 				BookingClass booking = new BookingClass(Firstname, Lastname, Age, Identification, Driverslicense, Email, selectedCar.Id, pickupDate, dropoffDate);
-				DBHelper.SaveBooking(booking);
+				Database.SaveBooking(booking);
 				MessageBox.Show("Your reservation has been successfully submitted!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				this.Close();
 			}

@@ -21,7 +21,7 @@ namespace CARRENTALBUSINESS
 
         private void LoadBookings()
         {
-            var bookings = DBHelper.GetBookings();
+            var bookings = Database.GetBookings();
             dataGridView1.DataSource = bookings;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = Color.LightBlue;

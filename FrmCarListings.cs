@@ -21,7 +21,7 @@ namespace CARRENTALBUSINESS
 
         private void LoadCars()
         {
-            var cars = DBHelper.GetCars();
+            var cars = Database.GetCars();
             dataGridView1.DataSource = cars;
             dataGridView1.Columns["Id"].Visible = false;
             dataGridView1.Columns["ImagePath"].Visible = false;
