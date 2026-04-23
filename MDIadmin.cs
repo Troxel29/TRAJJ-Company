@@ -15,11 +15,14 @@ namespace CARRENTALBUSINESS
         public MDIadmin()
         {
             InitializeComponent();
+            OpenHomePage();
         }
 
-        private void bOOKINGToolStripMenuItem_Click(object sender, EventArgs e)
+        private void OpenHomePage()
         {
-           
+            FrmHomePage frmHomePage = new FrmHomePage();
+            frmHomePage.MdiParent = this;
+            frmHomePage.Show();
 			FrmBooking frmBooking = new FrmBooking();
             frmBooking.MdiParent = this;
             frmBooking.Show();
