@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="CARRENTALBUSINESS.csproj" />
+  <Project Path="TRAJJ Company.csproj" />
+  <Project Path="UserAppLibrary/UserAppLibrary.csproj" Id="4c4e2969-13a0-4d22-b972-8bf1f62cbffc" />
+  <Project Path="WebApp1/WebApp1.csproj" Id="39f7eecb-0a40-44ec-bcbf-4f14f524512a" />
+</Solution>
